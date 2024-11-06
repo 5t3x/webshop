@@ -1,0 +1,120 @@
+body {
+    background-color: rgb(125, 158, 250);
+    color: white;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    list-style-type: none;
+    gap: 20px;
+}
+nav {
+    margin-bottom: 10px;
+    background-color: rgb(88, 122, 160);
+}
+
+li {
+    display: grid;
+    grid-column: 50px 50px 50px;
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+header, nav, article, aside, footer, .cikk {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+article {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "h h"
+                         "n n"
+                         "a as"
+                         "f f";
+}
+
+header {
+    grid-area: h;
+    background-color: rgb(80, 141, 161);
+}
+
+nav {
+    grid-area: n;
+    margin-top: 10px;
+}
+
+article {
+    grid-area: a;
+    text-align: center;
+    background-color:  rgb(88, 122, 160);
+}
+
+aside {
+    grid-area: as;
+    margin-left: 10px;
+    background-color:  rgb(88, 122, 160);;
+}
+
+footer {
+    margin-top: 10px;
+    background-color: rgb(80, 141, 161);
+    text-align: center;
+    grid-area: f;
+}
+
+@media screen and (max-width: 800px) {
+    main {  
+        grid-template-columns: 1fr;
+        grid-template-areas: "h"
+                             "n"
+                             "as"
+                             "a"
+                             "f";
+    }
+    
+    article {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.egy {
+    text-align: center;
+}
+
+.ar {
+    text-align: right;
+}
+
+button {
+    outline: none;
+    background-color: rgb(125, 158, 250);
+    border: 1px solid black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    display: grid;
+    grid-template-columns: 350px;
+}
